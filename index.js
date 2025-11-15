@@ -33,6 +33,7 @@ connectDB
     .then(() => {
         console.log('Connected to database!');
         app.listen(process.env.PORT, () => {
+            res.send('Youssef Hatem Loyalty App');
             console.log('Server run on '+process.env.PORT );
         });
     })
