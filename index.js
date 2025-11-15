@@ -9,6 +9,9 @@ app.use(cors());
 app.use(express.json());
 
 require("dotenv").config();
+app.get('/', (req, res) => {
+    res.send('Youssef Hatem Loyalty App');
+});
 
 const loginRouter = require("./routers/login.router");
 app.use("/api/auth", loginRouter);
@@ -33,7 +36,6 @@ connectDB
     .then(() => {
         console.log('Connected to database!');
         app.listen(process.env.PORT, () => {
-            res.send('Youssef Hatem Loyalty App');
             console.log('Server run on '+process.env.PORT );
         });
     })
