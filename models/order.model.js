@@ -34,7 +34,7 @@ const orderSchema = mongoose.Schema(
     },
     status: {
       type: String,
-      default: "pending"
+      default: "completed"
     }
   },
   { timestamps: true }
