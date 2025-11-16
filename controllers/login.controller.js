@@ -7,13 +7,13 @@ const generateTokens = (userId, email) => {
     const accessToken = jwt.sign(
         { id: userId, email },
         process.env.JWT_SECRET,
-        { expiresIn: "15m" } // Access Token قصير العمر
+        { expiresIn: "15m" } 
     );
 
     const refreshToken = jwt.sign(
         { id: userId },
         process.env.JWT_REFRESH_SECRET,
-        { expiresIn: "7d" } // Refresh Token طويل العمر
+        { expiresIn: "7d" } 
     );
 
     return { accessToken, refreshToken };
