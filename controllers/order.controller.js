@@ -38,7 +38,7 @@ const checkout = async (req, res) => {
     });
 
 const loyaltyResponse = await axios.post(
-  "http://localhost:3000/api/loyalty/add",
+  "https://loyalty-z748.onrender.com/api/loyalty/add",
   {
     order_total: totalPrice
   },
